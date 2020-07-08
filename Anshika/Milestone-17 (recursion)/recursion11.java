@@ -1,33 +1,28 @@
+// Write a program to convert a decimal number to binary using recursion
 
-/**
- * Write a description of class recursion11 here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
-public class recursion11
+import java.io.*;
+class recursion11
 {
-    // instance variables - replace the example below with your own
-    private int x;
 
-    /**
-     * Constructor for objects of class recursion11
-     */
-    public recursion11()
+    static int binary (int n)
     {
-        // initialise instance variables
-        x = 0;
+        if (n==1)
+        return 1;
+        else
+        {
+            return binary (n/2)*10 + n%2; 
+        }
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
+    public static void main () throws IOException
     {
-        // put your code here
-        return x + y;
+        InputStreamReader in=new InputStreamReader (System.in);
+        BufferedReader br=new BufferedReader (in);
+
+        System.out.println ("Enter the decimal no.");
+        int n=Integer.parseInt (br.readLine());
+
+        int b=binary (n);
+        System.out.println ("Binary conversion : "+b);
     }
 }

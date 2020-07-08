@@ -1,33 +1,26 @@
+//Write a program to count the digits of a given number using recursion
 
-/**
- * Write a description of class recursion5 here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
-public class recursion5
+import java.io.*;
+class recursion5
 {
-    // instance variables - replace the example below with your own
-    private int x;
 
-    /**
-     * Constructor for objects of class recursion5
-     */
-    public recursion5()
+    static int no_of_Digits (int n)
     {
-        // initialise instance variables
-        x = 0;
+        if (n==0)
+            return 0;
+        else
+        return 1 + no_of_Digits (n/10);
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
+    public static void main () throws IOException
     {
-        // put your code here
-        return x + y;
+        InputStreamReader in=new InputStreamReader (System.in);
+        BufferedReader br=new BufferedReader (in);
+
+        System.out.println ("Enter value of N");
+        int n=Integer.parseInt (br.readLine());
+
+        int d= no_of_Digits (n);
+        System.out.println ("The number of digits in "+n+" is : "+d);
     }
 }

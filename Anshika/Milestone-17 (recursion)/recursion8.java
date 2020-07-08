@@ -1,33 +1,35 @@
+//Write a program to get the largest element of an array using recursion
 
-/**
- * Write a description of class recursion8 here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
-public class recursion8
+import java.io.*;
+class recursion8
 {
-    // instance variables - replace the example below with your own
-    private int x;
 
-    /**
-     * Constructor for objects of class recursion8
-     */
-    public recursion8()
+    static int maximum (int[] ar, int i, int max)
     {
-        // initialise instance variables
-        x = 0;
+        if (i==ar.length)
+            return max;
+        else if (ar[i]>max)
+            return maximum (ar,i+1,ar[i]);
+        else
+            return maximum (ar,i+1,max);
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
+    public static void main (String args[]) throws IOException
     {
-        // put your code here
-        return x + y;
+        InputStreamReader in=new InputStreamReader (System.in);
+        BufferedReader br=new BufferedReader (in);
+
+        System.out.println ("Enter size of array");
+        int n=Integer.parseInt (br.readLine());
+
+        System.out.println ("Enter elements in array");
+        int ar[]=new int[n];
+        for (int i=0; i<n; i++)
+        {
+            ar[i]=Integer.parseInt(br.readLine());
+        }
+
+        int m = maximum (ar,0,ar[0]);
+        System.out.println ("the largest element of the array is : "+m);
     }
 }

@@ -1,33 +1,29 @@
+// Write a program to find GCD of two numbers using recursion.
 
-/**
- * Write a description of class recursion7 here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
-public class recursion7
+import java.io.*;
+class recursion7
 {
-    // instance variables - replace the example below with your own
-    private int x;
 
-    /**
-     * Constructor for objects of class recursion7
-     */
-    public recursion7()
+    static int gcd (int a, int b, int min)
     {
-        // initialise instance variables
-        x = 0;
+        if (min==1)
+            return 1;
+        else if (a%min==0 && b%min==0)
+            return min;
+        else
+            return gcd(a,b,min-1);
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
+    public static void main () throws IOException
     {
-        // put your code here
-        return x + y;
+        InputStreamReader in=new InputStreamReader (System.in);
+        BufferedReader br=new BufferedReader (in);
+
+        System.out.println ("Enter values of a and b");
+        int a=Integer.parseInt (br.readLine());
+        int b=Integer.parseInt (br.readLine());
+
+        int l=gcd (a,b,Math.min(a,b));
+        System.out.println ("G.C.D of "+a+" and "+b+" is : "+l);
     }
 }
