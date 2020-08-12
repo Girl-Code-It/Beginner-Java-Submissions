@@ -1,4 +1,4 @@
-     import java.util.*;
+import java.util.*;
 class Permutation_spaces
 {
     static void permutation (String s, int i, int l)
