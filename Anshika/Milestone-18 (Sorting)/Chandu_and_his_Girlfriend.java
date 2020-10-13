@@ -282,33 +282,38 @@ class Chandu_and_his_Girlfriend
             for(int i=0;i<n;++i)array[i]=nextInt();
             return array;
         }
-
+
+
         public int[] nextSortedIntArray(int n){
             int array[]=nextIntArray(n);
             Arrays.sort(array);
             return array;
         }
-
+
+
         public int[] nextSumIntArray(int n){
             int[] array=new int[n];
             array[0]=nextInt();
             for(int i=1;i<n;++i)array[i]=array[i-1]+nextInt();
             return array;
         }
-
+
+
         public long[] nextLongArray(int n){
             long[] array=new long[n];
             for(int i=0;i<n;++i)array[i]=nextLong();
             return array;
         }
-
+
+
         public long[] nextSumLongArray(int n){
             long[] array=new long[n];
             array[0]=nextInt();
             for(int i=1;i<n;++i)array[i]=array[i-1]+nextInt();
             return array;
         }
-
+
+
         public long[] nextSortedLongArray(int n){
             long array[]=nextLongArray(n);
             Arrays.sort(array);
