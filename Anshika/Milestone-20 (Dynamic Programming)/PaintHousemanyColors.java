@@ -3,7 +3,7 @@
 import java.io.*;
 import java.util.*;
 
-public class PaintHousemanyColors {
+public class PaintHouseManyColors {
 
     public static void main(String[] args) throws Exception {
         Scanner sc=new Scanner (System.in);
