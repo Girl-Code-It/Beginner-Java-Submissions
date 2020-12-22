@@ -1,0 +1,16 @@
+package MileStone1;
+
+public class WelcomeToGirlsCodeIt {
+
+	public static void main(String[] args) {
+		System.out.println("Welcome To Girls Code It");
+		/*System.out.println() is used to print an argument that is passed to it.
+		System:it is the final class defined in the java.lang package .
+		out:this is an instance of PrintStream class,which is public and static member field of the system class.
+		println:it is defined inside Print  stream class with public keyword,
+		it prints any argument passed to it and adds a new line to the output.we can assume that System.out.represtes the Standard output Stream
+		
+		 */
+	}
+
+}
